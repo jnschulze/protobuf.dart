@@ -611,8 +611,9 @@ class MessageGenerator extends ProtobufContainer {
                   start: 'set '.length)
             ]);
       } else {
-        final setterName =
-            useNullable && field.isOptional ? '\$_setFieldNullable' : '\$_setField';
+        final setterName = useNullable && field.isOptional
+            ? '\$_setFieldNullable'
+            : '\$_setField';
 
         out.printlnAnnotated(
             'set ${names.fieldName}'
